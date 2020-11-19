@@ -1,5 +1,11 @@
 import React from "react";
-
+import ProductList from "./ProductList";
+import useGlobalContext from "../../context/products";
+import Loading from "../Loading";
 export default function FeaturedProducts() {
-  return <h1>hello from featured products</h1>;
+  const { isLoading, featured, products } = useGlobalContext();
+  if (isLoading) {
+    return <Loading />;
+  }
+  return <ProductList title="featured products" products={featured} />;
 }
