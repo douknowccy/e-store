@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import CartLink from "../components/Cart/CartLink";
-
+import useGlobalUserContext from "../context/user";
+import LoginLink from "../components/LoginLink";
 export default function Header() {
+  const { user } = useGlobalUserContext();
   return (
     <header className="header">
       <img src={logo} alt="vintage tech logo" className="logo" />
@@ -19,14 +21,15 @@ export default function Header() {
             <li>
               <Link to="/products">Products</Link>
             </li>
+            {user.token && (
+              <li>
+                <Link to="/checkout">Checkout</Link>
+              </li>
+            )}
           </div>
           <div className="">
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <CartLink />
-            </li>
+            <LoginLink />
+            <CartLink />
           </div>
         </ul>
       </nav>
