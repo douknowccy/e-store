@@ -3,7 +3,7 @@ import ProductList from "./ProductList";
 import useGlobalContext from "../../context/products";
 import Loading from "../Loading";
 export default function FeaturedProducts() {
-  const { isLoading, featured, products } = useGlobalContext();
+  const { isLoading, featured } = useGlobalContext();
   if (isLoading) {
     return <Loading />;
   }

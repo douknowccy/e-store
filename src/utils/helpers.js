@@ -1,10 +1,10 @@
-import url from "./URL";
+// import url from "./URL";
 
 //flatten
 export function faltternProducts(data) {
   return data.map((item) => {
     //cloudinary
-    let image = item.image[0].url;
+    let image = (item.image[0] && item.image[0].url) || null;
 
     //local
     // let image = `${url}${item.image[0].url}`;

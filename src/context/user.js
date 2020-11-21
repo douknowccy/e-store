@@ -1,8 +1,8 @@
 // user context
-import React, { useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useContext, createContext, useEffect } from "react";
 
 const userContext = createContext();
-
+//get localstorage data
 function getUserFromLocalStorage() {
   return localStorage.getItem("user")
     ? JSON.parse(localStorage.getItem("user"))
@@ -11,7 +11,18 @@ function getUserFromLocalStorage() {
 
 export function UserProvider({ children }) {
   //   const [user, setUser] = useState({ username: null, token: null });
+
   const [user, setUser] = useState(getUserFromLocalStorage());
+  //get height value to scrollbutton
+  const [height, setHeight] = useState(0);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setHeight(window.pageYOffset);
+      // console.log(window.pageYOffset);
+    });
+    return () => window.removeEventListener("scroll", () => {});
+  }, [height]);
+
   const [alert, setAlert] = useState({
     show: false,
     msg: "",
@@ -35,7 +46,15 @@ export function UserProvider({ children }) {
   };
   return (
     <userContext.Provider
-      value={{ user, userLogin, userLogout, showAlert, hideAlert, alert }}
+      value={{
+        user,
+        height,
+        userLogin,
+        userLogout,
+        showAlert,
+        hideAlert,
+        alert,
+      }}
     >
       {children}
     </userContext.Provider>
