@@ -9,7 +9,7 @@ function Filter() {
   return (
     <section className="filters-section">
       <h2 className="section-title">搜尋寶貝</h2>
-      <form className="filters-form">
+      <form className="filters-form" onSubmit={(e) => e.preventDefault()}>
         <div className="">
           <div className="form-group">
             {/* search input */}
