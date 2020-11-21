@@ -20,6 +20,7 @@ https://e-store-kc.netlify.app/
 2.stripe
 3.heroku
 
-###手機版響應網頁截圖
+### 手機版響應網頁截圖:
+
 ![網站](/src/assets/E-STTORE-KC-home.jpg)
 ![網站](/src/assets/E-STTORE-KC-products.jpg)
