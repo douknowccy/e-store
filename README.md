@@ -4,14 +4,14 @@ DEMO:
 https://e-store-kc.netlify.app/ 
 
 ### 前端：
-#React
-#html
-#css
-#axios
-#react-icons
-#react-router-dom
-#netlify
+1.React
+2.html
+3.css
+4.axios
+5.react-icons
+6.react-router-dom
+7.netlify
 ### 後端：
-#stripi
-#stripe
-#heroku
+1.stripi
+2.stripe
+3.heroku
