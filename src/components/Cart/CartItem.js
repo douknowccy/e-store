@@ -16,7 +16,7 @@ export default function CartItem({ id, image, amount, title, price }) {
             removeItem(id);
           }}
         >
-          remove
+          移除
         </button>
       </div>
       <div className="">

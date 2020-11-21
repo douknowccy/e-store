@@ -32,7 +32,7 @@ export default function ProductDetails() {
               history.push("/cart");
             }}
           >
-            add to cart
+            加入購物車
           </button>
         </article>
       </section>

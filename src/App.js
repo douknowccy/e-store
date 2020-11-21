@@ -33,7 +33,7 @@ export default function App() {
         <Route path="/cart">
           <Cart />
         </Route>
-        <PrivateRoute path="/checkout" name="kimi">
+        <PrivateRoute path="/checkout">
           <Checkout />
         </PrivateRoute>
         <Route path="/login">

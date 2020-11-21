@@ -12,7 +12,26 @@ export function faltternProducts(data) {
     return { ...item, image };
   });
 }
-// helper functions
+// filter the item.featured or not
 export function featuredProducts(data) {
   return data.filter((item) => item.featured === true);
+}
+
+//pagination
+export function pagination(data) {
+  const itemsPerPage = 4;
+  const numberOfPages = Math.ceil(data.length / itemsPerPage);
+  //splice will mutate data
+  // const newProducts = Array.from({ length: numberOfPages }, () => {
+  //delete index of the array of itemsPerpage = 4
+  //   return data.splice(0, itemsPerPage);
+  // });
+  const newProducts = Array.from({ length: numberOfPages }, (_, index) => {
+    //every array index start 0,4,8,9,...
+    const start = index * itemsPerPage;
+
+    return data.slice(start, start + itemsPerPage);
+  });
+
+  return newProducts;
 }

@@ -7,5 +7,5 @@ export default function FeaturedProducts() {
   if (isLoading) {
     return <Loading />;
   }
-  return <ProductList title="featured products" products={featured} />;
+  return <ProductList title="推薦寶貝" products={featured} />;
 }

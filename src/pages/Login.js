@@ -17,7 +17,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("default");
-  const [isMember, setIsMember] = useState(true);
+  const [isMember, setIsMember] = useState(false);
 
   let isEmpty = !email || !password || !username || alert.show;
   //show register on sign in
@@ -61,7 +61,7 @@ export default function Login() {
       <form className="login-form">
         {/* setEmail */}
         <div className="form-control">
-          <label htmlFor="email">email</label>
+          <label htmlFor="email">信箱</label>
           <input
             type="email"
             id="email"
@@ -72,7 +72,7 @@ export default function Login() {
         {/* setEmail */}
         {/* setPassword */}
         <div className="form-control">
-          <label htmlFor="password">password</label>
+          <label htmlFor="password">密碼</label>
           <input
             type="password"
             id="password"
@@ -84,7 +84,7 @@ export default function Login() {
         {/* setUsername */}
         {!isMember && (
           <div className="form-control">
-            <label htmlFor="username">username</label>
+            <label htmlFor="username">使用者名稱</label>
             <input
               type="text"
               id="username"
@@ -95,7 +95,7 @@ export default function Login() {
         )}
         {/* setUsername */}
         {/* empty form text*/}
-        {isEmpty && <p className="form-empty">plase filled all from fields</p>}
+        {isEmpty && <p className="form-empty">請不要留空白</p>}
         {/* submit btn */}
         {!isEmpty && (
           <button
@@ -103,14 +103,14 @@ export default function Login() {
             className="btn btn-block btn-primary"
             onClick={handleSubmit}
           >
-            submit
+            註冊
           </button>
         )}
         {/* register link */}
         <p className="register-link">
-          {isMember ? "need to register" : "already a member"}
+          {isMember ? "註冊" : "已經是會員"}
           <button type="button" onClick={toggleMember}>
-            click here
+            這裏
           </button>
         </p>
       </form>

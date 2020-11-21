@@ -9,7 +9,7 @@ export default function Product({ image, title, id, price }) {
       <div className="img-container">
         <img src={image || img} alt={title || "default title"} />
         <Link to={`products/${id}`} className="btn btn-primary product-link">
-          details
+          詳細內容
         </Link>
       </div>
       <div className="product-footer">

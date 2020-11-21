@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import useGlobalUserContext from "../context/user";
 import useGlobalCartContext from "../context/cart";
 export default function LoginLink() {
+  const history = useHistory();
   const { user, userLogout } = useGlobalUserContext();
   const { clearCart } = useGlobalCartContext();
   if (user.token) {
@@ -12,11 +13,12 @@ export default function LoginLink() {
         onClick={() => {
           userLogout();
           clearCart();
+          history.push("/");
         }}
       >
-        logout
+        登出
       </button>
     );
   }
-  return <Link to="/login">login</Link>;
+  return <Link to="/login">登入</Link>;
 }

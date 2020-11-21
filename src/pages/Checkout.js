@@ -80,11 +80,11 @@ function Checkout(props) {
         <div className="stripe-input">
           <label htmlFor="card-element">credit or debit card</label>
           <p className="stripe-info">
-            using this credit card : <span>4242 4242 4242 4242</span>
+            輸入卡號: <span>4242 4242 4242 4242</span>
             <br />
-            enter any 5 digits for the zip code
+            輸入５碼郵遞區號
             <br />
-            enter any 3 digits for the CVC
+            輸入３碼CVC
           </p>
         </div>
         {/* end of card element */}
@@ -94,14 +94,14 @@ function Checkout(props) {
         {error && <p className="form-empty">{error}</p>}
         {/* empty value */}
         {isEmpty ? (
-          <p className="form-empty">plase fill out name field</p>
+          <p className="form-empty">請不要留空</p>
         ) : (
           <button
             type="submit"
             onClick={handleSubmit}
             className="btn btn-primary btn-block"
           >
-            submit
+            結帳
           </button>
         )}
 

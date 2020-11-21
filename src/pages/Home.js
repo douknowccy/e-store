@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Hero>
         <Link to="/products" className="btn btn-primary btn-hero">
-          our products
+          我的寶貝
         </Link>
       </Hero>
       <FeatureProducts />

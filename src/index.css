@@ -24,6 +24,7 @@ Variables
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainRed: #bd0303;
+  --mainBlue: #2997ff;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -143,9 +144,12 @@ Header
 .header {
   padding: 2rem 0;
 }
+
 .logo {
   margin: 0 auto;
   width: 9rem;
+  height: 70px;
+  object-fit: contain;
 }
 .header ul {
   display: flex;
@@ -187,36 +191,42 @@ Hero
       rgba(0, 0, 0, 0.7) 50%,
       rgba(255, 255, 255, 0.1)
     ),
-    url("./assets/mainBcg.jpeg") center/cover no-repeat;
+    url("./assets/mainBcg.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--primaryDarkColor);
+  position: relative;
 }
 .banner {
+  margin-top: 10px;
+  position: absolute;
+  top: 0;
   width: var(--smallWidth);
   max-width: var(--fullWidth);
 }
 .hero h1 {
   font-size: 3rem;
   text-transform: capitalize;
+  color: var(--mainWhite);
 }
 .hero p {
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 3px;
   margin-bottom: 1.75rem;
+  color: var(--mainWhite);
 }
 .btn-hero {
   border-radius: 0;
   font-weight: bold;
   padding: 0.8rem 1.5rem;
-  background: var(--primaryDarkColor);
-  border-color: var(--primaryDarkColor);
-  color: var(--mainBlack);
+  background: var(--mainWhite);
+  border-color: var(--mainWhite);
+  color: var(--mainBlue);
 }
 .btn-hero:hover {
-  color: var(--primaryDarkColor);
+  color: var(--mainBlue);
 }
 @media screen and (min-width: 768px) {
   .banner {
@@ -451,6 +461,7 @@ Cart Link
 .cart-link-container {
   position: relative;
 }
+.header-link,
 .cart-link-container a {
   margin-right: 10px;
   font-weight: bolder;

@@ -14,18 +14,18 @@ export default function Cart() {
   }
   return (
     <section className="cart-items section">
-      <h2>your cart</h2>
+      <h2>購物車</h2>
       {cart.map((item) => {
         return <CartItem key={item.id} {...item} />;
       })}
-      <h2>total : $ {total}</h2>
+      <h2>總共 : $ {total}</h2>
       {user.token ? (
         <Link to="/checkout" className="btn btn-primary btn-block">
-          check out
+          結帳
         </Link>
       ) : (
         <Link to="/login" className="btn btn-primary btn-block">
-          login
+          登入
         </Link>
       )}
     </section>
