@@ -16,7 +16,7 @@ export default function Login() {
   //state values
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("default");
+  const [username, setUsername] = useState("請設定新的使用者名稱");
   const [isMember, setIsMember] = useState(false);
 
   let isEmpty = !email || !password || !username || alert.show;
@@ -57,7 +57,7 @@ export default function Login() {
   };
   return (
     <section className="form section">
-      <h2 className="section-title">{isMember ? "Sign In" : "Register"}</h2>
+      <h2 className="section-title">{isMember ? "登入" : "註冊"}</h2>
       <form className="login-form">
         {/* setEmail */}
         <div className="form-control">
