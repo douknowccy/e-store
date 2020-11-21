@@ -19,5 +19,5 @@ https://e-store-kc.netlify.app/
 1.stripi
 2.stripe
 3.heroku
-![網站](/src/E-STTORE-KC-home.jpg)
-![網站](/src/E-STTORE-KC-products.jpg)
+![網站](/src/assets/E-STTORE-KC-home.jpg)
+![網站](/src/assets/E-STTORE-KC-products.jpg)
