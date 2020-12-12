@@ -1,4 +1,4 @@
-## 實作電子購物網站[E-Store-KC](https://e-store-kc.netlify.app/)
+## 實作線上購物網站[E-Store-KC](https://e-store-kc.netlify.app/)
 
 DEMO:
 
